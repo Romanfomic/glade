@@ -65,7 +65,12 @@ main {
     max-width: 100%;
 }
 
+.promote-wrapper {
+    display: flex;
+}
+
 .preview-header-promote {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -89,6 +94,10 @@ main {
     font-weight: 400;
     line-height: 32px;
     color: var(--secondary-text);
+}
+
+.preview-btn-wrapper {
+    display: flex;
 }
 
 .preview-btn {
