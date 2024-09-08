@@ -38,7 +38,6 @@ header {
     text-decoration: none;
 }
 
-
 main {
     padding: 76px 12.5%;
 }
@@ -47,6 +46,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 78px;
+}
+
+@media (max-width: 1200px) {
+    .preview {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 .preview-header {
