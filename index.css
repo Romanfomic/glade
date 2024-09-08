@@ -1,3 +1,8 @@
+:root {
+    --secondary-text: #757772;
+    --main-bg: #FFFFFF;
+}
+
 body {
     background-color: #F6F1EB;
     margin: 0;
@@ -5,7 +10,7 @@ body {
 
 header {
     height: 135px;
-    background-color: #FFFFFF;
+    background-color: var(--main-bg);
     border-bottom: 1px solid #F3F3F3;
     display: flex;
     align-items: center;
@@ -30,4 +35,70 @@ header {
     font-size: 20px;
     font-weight: 700;
     line-height: 23.44px;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 76px 12.5%;
+}
+
+.preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+}
+
+.preview-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.preview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.preview-img {
+    max-width: 100%;
+}
+
+.preview-header-promote {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--secondary-text);
+    border: 1px dashed var(--secondary-text);
+    border-radius: 40px;
+    padding: 10px 18px;
+}
+
+.preview-header-content {
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.preview-body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--secondary-text);
+}
+
+.preview-btn {
+    padding: 22px 52px;
+    border-radius: 40px;
+    background-color: #0D6032;
+    color: var(--main-bg);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
 }
