@@ -205,12 +205,27 @@ h3 {
     height: 800px;
     margin-top: 80px;
     border-radius: 40px;
-    background-image: url(assets/BigImg.svg);
-
+    background-image: url('assets/BigImg.svg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
     pre {
         margin: 0;
         font-family: 'Roboto', sans-serif;
     }
+}
+
+.big-img::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    backdrop-filter: blur(20px);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+    pointer-events: none;
 }
 
 .big-header {
@@ -308,6 +323,44 @@ h3 {
         color: var(--dark);
         font-weight: 500;
     }
+
+    .arrows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            width: 234px;
+            color: var(--btn-bg);
+            margin: 0 24px 48px;
+        }
+    }
+
+    .flip-horisontal {
+        transform: scaleX(-1);
+    }
+
+    .small-arrow {
+        align-self: flex-end;
+    }
+
+    div:last-child {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+    }
+
+    div > span {
+        background-color: var(--main-bg);
+        border-radius: 24px;
+        padding: 24px;
+        text-align: center;
+
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 64px;
+    }
 }
 
 .structure > div {
@@ -316,6 +369,26 @@ h3 {
     padding-left: 50px;
     height: 584px;
     background-image: url(assets/Structure.svg);
+
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 43px;
+
+    .description {
+        background-color: var(--main-bg);
+        opacity: 0.9;
+        border-radius: 40px;
+        padding: 32px;
+        width: 439px;
+    }
+
+    li {
+        list-style: none;
+        padding-left: 32px;
+        background-image: url(assets/ListCheck.svg);
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
 }
 
 .map {
